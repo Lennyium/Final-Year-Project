@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beba Sasa - Book Bus Rides in Nairobi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div class="login-container" id="loginPage">
+        <div class="login-overlay"></div>
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Beba Sasa</h1>
+                <p>Book your bus ride across Nairobi</p>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <button class="login-btn" id="loginBtn">Login</button>
+            <div class="login-footer">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Dashboard -->
+    <div class="dashboard" id="dashboard">
+        <div class="navbar">
+            <h1>Beba Sasa</h1>
+            <div class="navbar-options">
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="sidebar">
+                <ul class="sidebar-menu">
+                    <li class="active" data-section="bookTrip">Book Trip</li>
+                    <li data-section="upcomingTrips">Upcoming Trips</li>
+                    <li data-section="tripHistory">Trip History</li>
+                </ul>
+            </div>
+            <div class="content">
+                <!-- Book Trip Section -->
+                <div class="section active" id="bookTrip">
+                    <h2 class="section-title">Book a Trip</h2>
+                    <div class="card">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="departure">Pickup Location</label>
+                                <select id="departure">
+                                    <option value="">Select location</option>
+                                    <option value="cbd">CBD - City Center</option>
+                                    <option value="westlands">Westlands</option>
+                                    <option value="kilimani">Kilimani</option>
+                                    <option value="karen">Karen</option>
+                                    <option value="eastleigh">Eastleigh</option>
+                                    <option value="langata">Langata</option>
+                                    <option value="ngong_road">Ngong Road</option>
+                                    <option value="upperhill">Upperhill</option>
+                                    <option value="parklands">Parklands</option>
+                                    <option value="south_b">South B</option>
+                                    <option value="south_c">South C</option>
+                                    <option value="kangemi">Kangemi</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Destination Location</label>
+                                <select id="destination">
+                                    <option value="">Select location</option>
+                                    <option value="cbd">CBD - City Center</option>
+                                    <option value="westlands">Westlands</option>
+                                    <option value="kilimani">Kilimani</option>
+                                    <option value="karen">Karen</option>
+                                    <option value="eastleigh">Eastleigh</option>
+                                    <option value="langata">Langata</option>
+                                    <option value="ngong_road">Ngong Road</option>
+                                    <option value="upperhill">Upperhill</option>
+                                    <option value="parklands">Parklands</option>
+                                    <option value="south_b">South B</option>
+                                    <option value="south_c">South C</option>
+                                    <option value="kangemi">Kangemi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Travel Date</label>
+                                <input type="date" id="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time</label>
+                                <select id="time">
+                                    <option value="">Select time</option>
+                                    <option value="morning">Morning (6:00 AM - 12:00 PM)</option>
+                                    <option value="afternoon">Afternoon (12:00 PM - 6:00 PM)</option>
+                                    <option value="evening">Evening (6:00 PM - 12:00 AM)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="search-btn" id="searchBtn">Search Buses</button>
+                    </div>
+                    
+                    <div class="search-results" id="searchResults" style="display: none;">
+                        <h3>Available Buses</h3>
+                        <div class="bus-option">
+                            <div class="bus-info">
+                                <h3>Express Matatu</h3>
+                                <p>Route: CBD - Westlands - Kangemi</p>
+                            </div>
+                            <div class="bus-time">
+                                <p>10:00 AM</p>
+                                <p>45 min</p>
+                            </div>
+                            <div class="bus-price">
+                                <p>KSh 70</p>
+                            </div>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                        <div class="bus-option">
+                            <div class="bus-info">
+                                <h3>City Hoppa</h3>
+                                <p>Route: CBD - Ngong Road - Karen</p>
+                            </div>
+                            <div class="bus-time">
+                                <p>10:30 AM</p>
+                                <p>60 min</p>
+                            </div>
+                            <div class="bus-price">
+                                <p>KSh 100</p>
+                            </div>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                        <div class="bus-option">
+                            <div class="bus-info">
+                                <h3>Super Metro</h3>
+                                <p>Route: CBD - Upperhill - South B</p>
+                            </div>
+                            <div class="bus-time">
+                                <p>11:00 AM</p>
+                                <p>50 min</p>
+                            </div>
+                            <div class="bus-price">
+                                <p>KSh 80</p>
+                            </div>
+                            <button class="book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Upcoming Trips Section -->
+                <div class="section" id="upcomingTrips">
+                    <h2 class="section-title">Upcoming Trips</h2>
+                    <div class="trip-card">
+                        <div class="trip-info">
+                            <h3>CBD to Westlands</h3>
+                            <p>City Hoppa - 9:00 AM</p>
+                        </div>
+                        <div class="trip-date">
+                            <p>25 Mar 2025</p>
+                        </div>
+                        <div class="trip-status upcoming">
+                            <p>Upcoming</p>
+                        </div>
+                        <button class="cancel-btn">Cancel</button>
+                    </div>
+                    <div class="trip-card">
+                        <div class="trip-info">
+                            <h3>Kilimani to Eastleigh</h3>
+                            <p>Metro Trans - 7:30 AM</p>
+                        </div>
+                        <div class="trip-date">
+                            <p>28 Mar 2025</p>
+                        </div>
+                        <div class="trip-status upcoming">
+                            <p>Upcoming</p>
+                        </div>
+                        <button class="cancel-btn">Cancel</button>
+                    </div>
+                </div>
+                
+                <!-- Trip History Section -->
+                <div class="section" id="tripHistory">
+                    <h2 class="section-title">Trip History</h2>
+                    <div class="trip-card">
+                        <div class="trip-info">
+                            <h3>Karen to CBD</h3>
+                            <p>KBS - 8:00 AM</p>
+                        </div>
+                        <div class="trip-date">
+                            <p>15 Mar 2025</p>
+                        </div>
+                        <div class="trip-status completed">
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                    <div class="trip-card">
+                        <div class="trip-info">
+                            <h3>Westlands to South B</h3>
+                            <p>City Hoppa - 9:00 AM</p>
+                        </div>
+                        <div class="trip-date">
+                            <p>10 Mar 2025</p>
+                        </div>
+                        <div class="trip-status completed">
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                    <div class="trip-card">
+                        <div class="trip-info">
+                            <h3>Eastleigh to CBD</h3>
+                            <p>Forward Travelers - 7:00 AM</p>
+                        </div>
+                        <div class="trip-date">
+                            <p>05 Mar 2025</p>
+                        </div>
+                        <div class="trip-status completed">
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
